@@ -1,7 +1,4 @@
-# DS4B 101-R ----
 # PRODUCT RECOMMENDATION FUNCTIONS
-
-setwd("~/Work-School Docs/Business Science University/DS4B_101_R_Business_Analysis")
 
 # 1.0 LIBRARIES ----
 library(tidyverse)
@@ -9,11 +6,11 @@ library(tidyquant)
 library(parsnip)
 library(plotly)
 
-source("00_scripts/separate_bikes_and_outlier_detection.R")
+source("../scripts/separate_bikes_and_outlier_detection.R")
 
-bike_orderlines_tbl <- read_rds("00_data/bike_sales/data_wrangled/bike_orderlines.rds")
+bike_orderlines_tbl <- read_rds("../data/bike_orderlines.rds")
 
-models_tbl <- read_rds("00_models/parsnip_models_tbl.rds")
+models_tbl <- read_rds("../models/parsnip_models_tbl.rds")
 
 
 # 2.0 BIKE FEATURES ----
@@ -76,4 +73,4 @@ plot_bike_features(interactive = FALSE)
 
 function_names <- c("get_bike_features", "plot_bike_features")
 
-dump(function_names, file = "00_scripts/plot_product_recommendation.R")
+dump(function_names, file = "../scripts/plot_product_recommendation.R")

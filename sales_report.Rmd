@@ -1,7 +1,7 @@
 ---
 title: "Sales Report"
-author: "Business Science"
-date: "January 9, 2020"
+author: "Estevan Fisk"
+date: "November 10, 2025"
 output:
   html_document:
     code_folding: none
@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = FALSE,
 ```
 
 ```{r}
-interative <- FALSE
+interative <- TRUE
 ```
 
 
@@ -39,11 +39,11 @@ library(plotly)
 ```
 
 ```{r}
-source("../00_scripts/plot_sales.R")
+source("scripts/plot_sales.R")
 ```
 
 ```{r}
-bike_orderlines_tbl <- read_rds("../00_data/bike_sales/data_wrangled/bike_orderlines.rds")
+bike_orderlines_tbl <- read_rds("data/bike_orderlines.rds")
 ```
 
 # Total Sales Charts {.tabset .tabset-fade .tabset-pills}

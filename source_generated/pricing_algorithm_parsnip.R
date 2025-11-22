@@ -1,9 +1,6 @@
-# DS4B 101-R: R FOR BUSINESS ANALYSIS ----
 # REGRESSION MODELS ----
 
 # GOAL: BUILD PREDICTION MODEL FOR PRICING ALGORITHM
-
-setwd("~/Work_School/Business Science University/DS4B_101_R_Business_Analysis")
 
 # LIBRARIES & DATA ----
 
@@ -29,10 +26,11 @@ library(yardstick)
 library(rpart.plot)
 
 # Source Scripts
-source("00_scripts/separate_bikes_and_outlier_detection.R")
+source("../scripts/separate_bikes_and_outlier_detection.R")
+
 
 # Read Data
-bike_orderlines_tbl <- read_rds("00_data/bike_sales/data_wrangled/bike_orderlines.rds")
+bike_orderlines_tbl <- read_rds("../data/bike_orderlines.rds")
 
 glimpse(bike_orderlines_tbl)
 
@@ -716,7 +714,7 @@ bike_features_tbl %>%
 
 # Create new folder
 
-fs::dir_create("00_models")
+fs::dir_create("../models")
 ?fs::dir_create
 
 models_tbl <- list("MODEL_01__LM_SIMPLE" = model_01_linear_lm_simple,
@@ -733,26 +731,26 @@ models_tbl <- list("MODEL_01__LM_SIMPLE" = model_01_linear_lm_simple,
 
 models_tbl
 
-models_tbl %>% write_rds("00_models/parsnip_models_tbl.rds")
+models_tbl %>% write_rds("../models/parsnip_models_tbl.rds")
 
 
 recipes_tbl <- list("RECIPE_01" = recipe_obj) %>%
     enframe(name = "recipe_id", value = "recipe")
 
 
-recipes_tbl %>% write_rds("00_models/recipes_tbl.rds")
+recipes_tbl %>% write_rds("../models/recipes_tbl.rds")
 
 
-calc_metrics %>% write_rds("00_scripts/calc_metrics.rds")
+#calc_metrics %>% write_rds("../scripts/calc_metrics.rds")
 
 
 
 # Reading
 
-models_tbl <- read_rds("00_models/parsnip_models_tbl.rds")
+models_tbl <- read_rds("../models/parsnip_models_tbl.rds")
 
-recipes_tbl <- read_rds("00_models/recipes_tbl.rds")
+recipes_tbl <- read_rds("../models/recipes_tbl.rds")
 
-calc_metrics <- read_rds("00_scripts/calc_metrics.rds")
+#calc_metrics <- read_rds("../scripts/calc_metrics.rds")
 
 

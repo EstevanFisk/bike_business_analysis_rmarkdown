@@ -1,14 +1,14 @@
 ---
 title: "Product Pricing Algorithm"
 author: "Estevan Fisk"
-date: "11/01/2025"
+date: "11/10/2025"
 output:
   html_document:
     df_print: paged
     theme: flatly
   pdf_document: default
 params:
-  interactive: True
+  interactive: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -28,16 +28,16 @@ library(scales)
 ```
 
 ```{r}
-source("../00_scripts/separate_bikes_and_outlier_detection.R")
-source("../00_scripts/plot_product_recommendation.R")
+source("scripts/separate_bikes_and_outlier_detection.R")
+source("scripts/plot_product_recommendation.R")
 ```
 
 ```{r}
-bike_orderlines_tbl <- read_rds("../00_data/bike_sales/data_wrangled/bike_orderlines.rds")
+bike_orderlines_tbl <- read_rds("data/bike_orderlines.rds")
 ```
 
 ```{r}
-models_tbl <- read_rds("../00_models/parsnip_models_tbl.rds")
+models_tbl <- read_rds("models/parsnip_models_tbl.rds")
 ```
 
 ```{r}
