@@ -4,7 +4,7 @@ author: "Estevan Fisk"
 date: "November 10, 2025"
 output:
   html_document:
-    code_folding: none
+    code_folding: hide # Options are "hide" (default hidden), "show" (default shown), or null (no button)
     df_print: paged
     highlight: tango
     number_sections: yes
@@ -17,7 +17,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
+knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE,
                       warning = FALSE,
                       out.width = "100%",

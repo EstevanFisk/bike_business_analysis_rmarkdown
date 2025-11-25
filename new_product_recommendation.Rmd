@@ -5,6 +5,7 @@ date: "11/10/2025"
 output:
   html_document:
     df_print: paged
+    code_folding: hide # Options are "hide" (default hidden), "show" (default shown), or null (no button)
     theme: flatly
   pdf_document: default
 params:
@@ -13,7 +14,7 @@ params:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-    echo = FALSE,
+    echo = TRUE,
     message = FALSE,
     warning = FALSE,
     out.width = "100%")
