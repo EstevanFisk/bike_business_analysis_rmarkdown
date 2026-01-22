@@ -59,7 +59,7 @@ Every report in this suite features **interactive code-folding.** By prioritizin
 
 1.  **Clone the Repo:**
     ```bash
-    git clone [https://github.com/yourusername/strategic-retail-intelligence.git](https://github.com/EstevanFisk/bike_business_analysis_rmarkdown.git)
+    git clone https://github.com/EstevanFisk/bike_business_analysis_rmarkdown.git
     ```
 2.  **Restore Environment:**
     Ensure you have `RStudio` and the following libraries:
